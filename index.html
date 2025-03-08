@@ -68,7 +68,6 @@
           <button class="main__btn" type="button">Order Service</button>
         </div>
       </section>
-    
 
       <!-- Second Section -->
       <section class="features">
@@ -475,17 +474,20 @@
           </ul>
         </div>
         <div class="footer-content">
-          <p class="footer-content__p">Subscribe</p>
+          <p class="footer-text">Subscribe</p>
           <form class="footer-form">
-            <input
-              type="email"
-              name="email"
-              placeholder="Your email"
-              required
-            />
-            <button type="submit" class="footer-form__submit">
+            <label class="footer-label">
+              <input
+                type="email"
+                name="email"
+                class="footer-input"
+                placeholder="E-mail"
+                required
+              />
+            </label>
+            <button type="submit" class="footer-button">
               Subscribe
-              <svg class="footer-form__icon" width="24" height="24">
+              <svg class="footer-icon" width="24" height="24">
                 <use href="./images/icons2.svg#Frame 3"></use>
               </svg>
             </button>
@@ -501,43 +503,56 @@
             <use href="./images/icons2.svg#close"></use>
           </svg>
         </button>
-        <h2 class="modal__title">Leave your contacts and we will call you back</h2>
+        <h2 class="modal__title">
+          Leave your contacts and we will call you back
+        </h2>
         <form class="modal__form">
           <label class="modal__label">
             Name
-            <div class="modal__input-wrapper">
+            <span class="modal__input-wrapper">
               <svg class="modal__icon" width="20" height="20">
                 <use href="./images/icons2.svg#Frame 1"></use>
               </svg>
-              <input type="text" name="name" placeholder="Your name" required>
-            </div>
+              <input type="text" name="name" placeholder="Your name" required />
+            </span>
           </label>
           <label class="modal__label">
             Phone
-            <div class="modal__input-wrapper">
+            <span class="modal__input-wrapper">
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons2.svg#phone-black-18dp 1"></use>
               </svg>
-              <input type="tel" name="phone" placeholder="Your phone" required>
-            </div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Your phone"
+                required
+              />
+            </span>
           </label>
           <label class="modal__label">
             Email
-            <div class="modal__input-wrapper">
+            <span class="modal__input-wrapper">
               <svg class="modal__icon" width="18" height="18">
                 <use href="./images/icons2.svg#email-black-18dp 1"></use>
               </svg>
-              <input type="email" name="email" placeholder="Your email" required>
-            </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+              />
+            </span>
           </label>
           <label class="modal__label">
             Comment
             <textarea name="comment" placeholder="Text input"></textarea>
           </label>
           <label class="modal__checkbox">
-            <input type="checkbox" name="terms" required>
+            <input type="checkbox" name="terms" required />
             <span class="custom-checkbox"></span>
-            I accept the terms and conditions of the <a href="#" class="link">Privacy Policy</a>
+            I accept the terms and conditions of the
+            <a href="#" class="link">Privacy Policy</a>
           </label>
           <button type="submit" class="modal__submit">Send</button>
         </form>
