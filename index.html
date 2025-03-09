@@ -524,12 +524,13 @@
             </div>
           </div>
           <div class="modal-form__name">
-            <label class="modal__label"> Phone </label>
+            <label class="modal__label" for="user-name"> Phone </label>
             <div class="modal__input-wrapper">
               <input
                 type="tel"
                 name="phone"
                 placeholder="Your phone"
+                id="user-name"
                 class="name-input"
                 required
               />
@@ -539,11 +540,12 @@
             </div>
           </div>
           <div class="modal-form__name">
-            <label class="modal__label"> Email </label>
+            <label class="modal__label" for="user-name"> Email </label>
             <div class="modal__input-wrapper">
               <input
                 type="email"
                 name="email"
+                id="user-name"
                 placeholder="Your email"
                 required
               />
@@ -571,7 +573,11 @@
               required
             />
             <label class="modal__checkbox" for="user-privacy">
-              <span class="custom-checkbox"></span>
+              <span class="custom-checkbox">
+                <svg class="icon-check" width="10" height="8">
+                  <use href="./images/sprite.svg#Vector"></use>
+                </svg>
+              </span>
               I accept the terms and conditions of the
               <a href="#" class="link">Privacy Policy</a>
             </label>

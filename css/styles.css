@@ -845,6 +845,10 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
   background-color: #404bbf;
   border: none;
 }
+.modal__close:hover .modal__icon,
+.modal__close:focus-visible .modal__icon {
+  fill: #ffffff;
+}
 .modal__form {
   display: flex;
   flex-direction: column;
@@ -865,9 +869,6 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
   justify-content: center;
   align-items: center;
   padding: 5px;
-  border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  height: 40px;
   margin-bottom: 8px;
   position: relative;
 }
@@ -882,12 +883,15 @@ transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-b
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   border-color: #4D5AE5;
 }
+.input-wrapper input:focus+svg {
+  fill: #4D5AE5;
+}
 .modal__icon {
   margin-right: 5px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   left: 16px;
-top: 50%;
+  top: 50%;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -898,7 +902,9 @@ top: 50%;
 .modal__icon:focus {
   fill: #ffffff;
 }
-
+.textrea-content {
+  margin-bottom: 16px;
+}
 .textarea {
 width: 100%;
   height: 120px;
@@ -910,7 +916,6 @@ padding: 8px 16px;
 outline: transparent;
 resize: none;
 transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 5px;
   margin-bottom: 16px;
   margin-top: 4px;
   font-size: 12px;
@@ -963,27 +968,25 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   fill: transparent;
 }
-.modal__checkbox input:checked + .custom-checkbox::before {
-  content: "\2713";
-  position: absolute;
-  left: 2px;
-  top: -2px;
-  font-size: 16px;
-  color: #fff;
-  background: #000;
-  border-radius: 2px;
+.icon-check {
+  width: 10px;
+  height: 8px;
+}
+
+input:checked+.custom-checkbox {
+  background-color: var(--checkbox-bg-checked);
+  border: none;
+  fill: var(--checkbox-fill-checked);
 }
 .modal__submit {
   display: block;
   padding: 16px 32px;
-  align-items: flex-start;
   border-radius: 4px;
   border: none;
   background: #4d5ae5;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   color: #fff;
   text-align: center;
-  font-family: Roboto;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1017,4 +1020,5 @@ transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link {
   margin-left: 3px;
+  color: #4d5ae5;
 }
